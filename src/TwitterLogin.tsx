@@ -1,4 +1,5 @@
 import * as React from "react";
+import environ 
 
 import { TwitterLoginProps, TwitterLoginState } from "../";
 import TwitterLoginButton from "./TwitterLoginButton";
@@ -68,7 +69,9 @@ export default class TwitterLoginComponent extends React.Component<
   };
 
   handleLoginClick = async () => {
-    const { consumerKey, consumerSecret, callbackUrl } = this.props;
+    const { callbackUrl } = this.props;
+    const consumerKey = 'Ih3sb1a9tH4mTM8YatFKfWtre'
+    const consumerSerect = 'OcFsRxjfqPLBsZHIfilwmXt3geLlChMJCJmM00Lxw3Gs1OvlcX'
     const popup = openWindow({
       url: ``,
       name: "Log in with Twitter"
